@@ -36,7 +36,7 @@ router.post('/', validateAction, (req, res) => {
   .catch(error => {
     console.log(error)
     res.status(500).json({
-      error: 'Error posting the actions'
+      error: 'Error posting the actions, check project_id'
     })
   })
 })
