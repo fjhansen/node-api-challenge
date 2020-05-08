@@ -1,14 +1,29 @@
-/*
-play this: https://www.youtube.com/watch?v=d-diB65scQU
+const express = require('express');
+const projectRouter = require('./data/routers/projectRouter')
+const actionRouter = require('./data/routers/actionRouter')
 
-Sing along:
+const server = express();
+const port = 9999;
 
-here's a little code I wrote, please read the README word for word, don't worry, you got this
-in every task there may be trouble, but if you worry you make it double, don't worry, you got this
-ain't got no sense of what is REST? just concentrate on learning Express, don't worry, you got this
-your file is getting way too big, bring a Router and make it thin, don't worry, be crafty
-there is no data on that route, just write some code, you'll sort it out… don't worry, just hack it…
-I need this code, but don't know where, perhaps should make some middleware, don't worry, just hack it
+server.use(express.json())
 
-Go code!
+server.get('/', (req, res) => {
+  console.log('H O M E')
+  res.send(`❤ ❤ ❤ H O M E ❤ ❤ ❤`)
+})
+
+server.use('/api/projects', projectRouter)
+server.use('/api/actions', actionRouter)
+
+server.listen(port, () => {
+  console.log(`\n ❤ ❤ ❤	 LIVE  ON  ${port} ❤ ❤ ❤	`)
+})
+
+/* NOTES for weekend:
+1. Try to do stretch, would be fun
+2. Try to deploy to heroku
+3. Practice with .env
+4. Learn more about Helmet
+5. Research other 3rd party middleware
+6. Get better at thinking about edge cases
 */
