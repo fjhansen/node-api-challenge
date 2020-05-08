@@ -14,7 +14,7 @@ router.post('/', validateProject, (req, res) => {
   .catch(error => {
     console.log(error)
     res.status(500).json({
-      error: 'Error getting the Projects'
+      error: 'Error posting the Projects'
     })
   })
 })
@@ -27,7 +27,7 @@ router.get('/', validateId, (req, res) => {
   })
   .catch(error => {
     console.log(error);
-    res.status(500).json({error: 'Error getting the posts'})
+    res.status(500).json({error: 'Error getting the projects'})
   })
 })
 
