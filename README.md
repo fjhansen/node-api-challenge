@@ -38,16 +38,16 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your Team Lead.
 
-- [ ] Mention two parts of Express that you learned about this week.
+- [x] Mention two parts of Express that you learned about this week.
 1. We learned about express which makes creating an API easier through conventions such as middleware
 2. We also learned about express routing, which makes it possible to serve data through clients tailored requests through endpoints.
-- [ ] Describe Middleware?
+- [x] Describe Middleware?
 middleware is a function that is like agents on a conveyorbelt that can decide what to do with responses or requests, or to stop them. There are global middlewares like `server.use(express.json())` which mean that every request in the program passes through it. routers are also considered middleware.
-- [ ] Describe a Resource?
+- [x] Describe a Resource?
 A `Resource` is one or more programs that carry out operations for a specific purpose. An API is considered a resource. Express is considered a resource as well.
-- [ ] What can the API return to help clients know if a request was successful?
+- [x] What can the API return to help clients know if a request was successful?
 Generally a 200 status code could be used, but 201 could be used for a successful request that also changed data in the API.
-- [ ] How can we partition our application into sub-applications?
+- [x] How can we partition our application into sub-applications?
 You can use routes with endpoints for this. 
 ## Minimum Viable Product
 
